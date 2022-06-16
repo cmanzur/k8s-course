@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: startup-tcp
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.21
+    ports:
+    - containerPort: 80
+      name: liveness-port
+    startupProbe:
+      tcpSocket:
+        port: liveness-port
+      periodSeconds: 10
+      failureThreshold: 30
+    livenessProbe:
+      tcpSocket:
+        port: liveness-port
+      periodSeconds: 10
+      failureThreshold: 1
+
+
