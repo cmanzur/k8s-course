@@ -47,6 +47,16 @@ kubectl describe pod startup-tcp
 kubectl delete -f startup-tcp.yml
 ```
 
+## Readiness Probe - FAIL Example
+
+### HTTP Request
+
+```
+kubectl apply -f readiness-fail.yml
+kubectl describe pod readiness-fail
+kubectl delete -f readiness-fail.yml
+```
+
 
 
 
