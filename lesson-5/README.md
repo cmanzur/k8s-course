@@ -61,7 +61,7 @@ kubectl delete -f readiness-fail.yml
 
 ```
 kubectl apply -f game.yml
-kubectl describe pod game
+kubectl describe deployment 2048-deployment
 kubectl delete -f game.yml
 ```
 
