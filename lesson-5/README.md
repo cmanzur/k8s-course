@@ -57,6 +57,12 @@ kubectl describe pod readiness-fail
 kubectl delete -f readiness-fail.yml
 ```
 
+## Game Deployment
 
+```
+kubectl apply -f game.yml
+kubectl describe pod game
+kubectl delete -f game.yml
+```
 
 
